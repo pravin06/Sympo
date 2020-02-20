@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block main_block %}
+        {% load static%}
+<form method="post" action="{% url 'registration:login' %}">
+{% csrf_token %}
+
+    <input type="text" name="mobile" placeholder="Enter the mobile"><br>
+    <input type="text" name="email" placeholder="Enter the Email"><br>
+
+<input type="submit" value="Login">
+
+
+</form>
+{% endblock %}

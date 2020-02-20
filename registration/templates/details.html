@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block main_block %}
+{% comment %}        {% load static%}
+{% if check %}
+    <p> {{ single.address  }} {{ single.pincode }}</p>
+{% else %}
+      <p> Address DoestExist</p>
+{% endif %}{% endcomment %}
+
+    <h1>{{questions.name}}</h1>
+{% if questions.studentsdetails_set.all%}
+{%if error_message %} <p>{{error_message}}</p> {% endif %}
+ {%for c in questions.studentsdetails_set.all %}
+
+    <label >{{c.address}}</label><br>
+    {% endfor %}
+
+
+{%else %}
+<p>Sorry We dont have choice fot this question</p>
+{% endif %}
+{% endblock %}

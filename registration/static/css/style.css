@@ -1,0 +1,16 @@
+body{
+    background-color: coral;
+}
+nav a{
+    padding: 20px;
+    text-decoration: none;
+    color: navy;
+    margin-top: 10px;
+}
+nav a:hover{
+    padding: 20px;
+    text-decoration: none;
+    background-color: navy;
+    color: white;
+        margin-top: 10px;
+}

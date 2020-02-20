@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block main_block %}
+        {% load static%}
+<form method="post" action="{% url 'registration:register' %}">
+{% csrf_token %}
+    <input type="text" name="name" placeholder="Enter the Name"><br>
+    <input type="text" name="mobile" placeholder="Enter the mobile"><br>
+    <input type="text" name="email" placeholder="Enter the Email"><br>
+    <input type="text" name="address" placeholder="Enter the Address"><br>
+    <input type="text" name="pincode" placeholder="Enter the Pincode"><br>
+<input type="submit" value="register">
+
+    <p> <a href="{% url 'registration:loginuser' %}">click here to login</a></p>
+</form>
+{% endblock %}
